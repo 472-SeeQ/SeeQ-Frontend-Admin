@@ -2,7 +2,7 @@ import { Link, redirect, useFetcher, useLoaderData, type ActionFunctionArgs, typ
 import { useEffect, useState } from "react";
 
 import Provider, { setDefaultStatus } from "~/provider";
-import { getAuthCookie } from "~/services/cookie";
+import { getAuthCookie } from "~/utils/cookie";
 
 interface MapClientProps {
     position: [number, number] | null;

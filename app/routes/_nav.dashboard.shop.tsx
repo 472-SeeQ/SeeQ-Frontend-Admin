@@ -2,7 +2,7 @@ import { Store } from "lucide-react";
 import CardDashboardShop from "~/components/card-dashboard-shop";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Bar, BarChart } from "recharts";
 import { Link, redirect, useLoaderData, type ActionFunctionArgs, type LoaderFunctionArgs } from "react-router";
-import { getAuthCookie } from "~/services/cookie";
+import { getAuthCookie } from "~/utils/cookie";
 import provider, { setDefaultProvider } from "~/provider";
 import { calculateNewShopInSevenDays, calculateStatusShopInSevenDays } from "~/utils/culculator";
 

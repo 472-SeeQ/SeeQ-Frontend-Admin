@@ -3,7 +3,7 @@ import { Link, redirect, useLoaderData, type ActionFunctionArgs, type LoaderFunc
 import CardDashboardShop from "~/components/card-dashboard-shop";
 import CardDashboardUser from "~/components/card-dashboard-user";
 import provider, { setDefaultProvider } from "~/provider";
-import { getAuthCookie } from "~/services/cookie";
+import { getAuthCookie } from "~/utils/cookie";
 
 export async function loader({ request }: LoaderFunctionArgs) {
     const auth = await getAuthCookie({ request: request });

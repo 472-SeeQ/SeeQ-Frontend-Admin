@@ -2,7 +2,7 @@ import { type LoaderFunctionArgs } from "react-router";
 import { Link, redirect, useFetcher, useLoaderData } from "react-router";
 import { Store, ChevronRight, PlusCircle } from "lucide-react";
 import Provider, { setDefaultProvider } from "~/provider";
-import { getAuthCookie } from "~/services/cookie";
+import { getAuthCookie } from "~/utils/cookie";
 
 export async function loader({ request }: LoaderFunctionArgs){
     const auth = await getAuthCookie({request: request});

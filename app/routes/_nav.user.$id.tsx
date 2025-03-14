@@ -1,7 +1,7 @@
 import { Ban, CalendarMinus, CalendarPlus, CalendarSync, Check, ChevronLeft, LucideClock, Mail, Phone } from "lucide-react";
 import { Link, redirect, useFetcher, useLoaderData, type ActionFunctionArgs, type LoaderFunctionArgs } from "react-router";
 import provider from "~/provider";
-import { getAuthCookie } from "~/services/cookie";
+import { getAuthCookie } from "~/utils/cookie";
 
 export async function loader({ params }: LoaderFunctionArgs) {
     const { id } = params;

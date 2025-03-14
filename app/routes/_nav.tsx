@@ -1,6 +1,9 @@
-import { Outlet, useLocation } from "react-router";
+import { Outlet, useLocation, type ActionFunctionArgs } from "react-router";
 import SidebarMenu, { SidebarItem } from "~/components/sidebar-menu";
-import { LayoutDashboard, PlusCircle, Store, Users } from "lucide-react";
+import { LayoutDashboard, PlusCircle, ShieldUser, Store, Users } from "lucide-react";
+import { getAuthCookie, type AuthCookieProps } from "~/utils/cookie";
+import { logout } from "~/utils/auth";
+
 
 export default function Nav() {
     const currentPath = useLocation().pathname;
@@ -43,8 +46,8 @@ export default function Nav() {
                         {pageTitles[currentPath]}
                     </h1>
                     <div className="flex flex-row gap-2 justify-center items-center">
-                        <div className="p-4 bg-[rgb(0,0,0,0.1)] rounded-full"></div>
-                        <h1 className="">Austin Robertson</h1>
+                        <ShieldUser size={36}></ShieldUser>
+                        <h1 className="">Admin</h1>
                     </div>
                 </div>
                 <Outlet />

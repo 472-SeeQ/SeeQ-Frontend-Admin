@@ -57,3 +57,18 @@ export async function requestDecryptToken(
     error: response.status === 500 ? "เกิดข้อผิดพลาด" : "",
   };
 }
+
+export async function logout(token: string):  Promise<ResponseMessageProps>{
+  const response = await fetch(`${BACKEND_URL}/auth/logout`, {
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${token}`
+    },
+    method: "POST",
+  });
+  return {
+    data: {},
+    status: response.status,
+    error: response.status != 204 ? "เกิดข้อผิดพลาด" : ""
+  }
+}

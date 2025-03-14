@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail, Clock, Info, Calendar, CheckCircle, ChevronLeft } 
 
 import Provider, { setDefaultStatus } from "~/provider";
 import { useEffect, useRef } from 'react';
-import { getAuthCookie } from '~/services/cookie';
+import { getAuthCookie } from '~/utils/cookie';
 
 export async function loader({ params }: LoaderFunctionArgs) {
     const { id } = params;
